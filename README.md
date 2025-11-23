@@ -52,6 +52,8 @@ https://github.com/allenai/ir_datasets
 **Sparse and dense information**
 https://www.reddit.com/r/MachineLearning/comments/z76uel/d_difference_between_sparse_and_dense_information/
 
+**Retriever and Reranker**
+https://www.pinecone.io/learn/series/rag/rerankers/
 ****
 
 ## **Q & A**
@@ -81,11 +83,6 @@ We use two stages because retrieving a small set of documents from a large datas
 Together, these tools form a workflow where ir_datasets basically supplies the data, PyTerrier runs the retrieval pipeline, and ir-measures evaluates the results.
 
 
-
-
-
-**Retriever and Reranker**
-https://www.pinecone.io/learn/series/rag/rerankers/
 
 
 
