@@ -52,6 +52,37 @@ https://github.com/allenai/ir_datasets
 **Sparse and dense information**
 https://www.reddit.com/r/MachineLearning/comments/z76uel/d_difference_between_sparse_and_dense_information/
 
+****
+
+## **Q & A**
+
+**What is a retriever?**
+
+A retriever, which retrieves relevant knowledge pieces from a knowledge base given a context, is an important component in many natural language processing (NLP) tasks. Retrievers have been introduced in knowledge-grounded dialog systems to improve knowledge acquisition. Basically finds quickly a candidate set of potentially relevant documents from a huge collection based on the query.
+<br/><br/>
+**What is a reranker?**
+
+A reranking model — also known as a cross-encoder — is a type of model that, given a query and document pair, will output a similarity score. We use this score to reorder the documents by relevance to our query.
+
+Search engineers have used rerankers in two-stage retrieval systems for a long time. In these two-stage systems, a first-stage model (an embedding model/retriever) retrieves a set of relevant documents from a larger dataset. Then, a second-stage model (the reranker) is used to rerank those documents retrieved by the first-stage model.
+
+We use two stages because retrieving a small set of documents from a large dataset is much faster than reranking a large set of documents — we'll discuss why this is the case soon — but TL;DR, rerankers are slow, and retrievers are fast.
+
+[Good website for explanation on the above two questions](https://www.pinecone.io/learn/series/rag/rerankers/)
+<br/><br/>
+**What are PyTerrier, ir-measures and ir_datasets?**
+
+**PyTerrier** is a Python framework for building reproducible IR experiments by chaining components such as retrievers and rerankers into pipelines.
+
+**ir-measures** is a library that provides standardized implementations of evaluation metrics like MRR, Recall, and nDCG to ensure consistency across experiments
+
+**ir_datasets** is a library that offers access to benchmark IR datasets (including queries, documents, ...) with standardized preprocessing and versioning. 
+
+Together, these tools form a workflow where ir_datasets basically supplies the data, PyTerrier runs the retrieval pipeline, and ir-measures evaluates the results.
+
+
+
+
 
 **Retriever and Reranker**
 https://www.pinecone.io/learn/series/rag/rerankers/
